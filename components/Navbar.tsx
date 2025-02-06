@@ -25,7 +25,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <div className={`w-full sticky top-0 bg-background border-zinc-100 ${
+    <div className={`w-full sticky top-0 bg-background border-zinc-100 dark:border-zinc-800 ${
       isScrolled && 'border-b-[1.5px]'}
     }`}>
       <nav className={`container relative flex flex-wrap items-center justify-between mx-auto lg:justify-between xl:px-1 transition-padding duration-200 ${
@@ -49,7 +49,7 @@ export const Navbar = () => {
 
         {/* get started  */}
         <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
-            {/* <ThemeChanger /> */}
+            <ThemeChanger />
             <div className="hidden mr-3 lg:flex nav__item">
               <Link href="/" className="px-6 py-2 text-white bg-[#0b82c5] rounded-full md:ml-5">
                 Get involved
