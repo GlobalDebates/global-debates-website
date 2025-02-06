@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 
 const ThemeChanger = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, resolvedTheme, setTheme } = useTheme();
 
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
@@ -13,7 +13,7 @@ const ThemeChanger = () => {
 
   return (
     <div className="flex items-center justify-center order-last w-10 ">
-      {theme === "dark" ? (
+      {resolvedTheme === "dark" ? (
         <button
           onClick={() => setTheme("light")}
           className="text-gray-300 rounded-full outline-none focus:outline-none ">
